@@ -45,6 +45,20 @@ namespace form_submission.Controllers
             ViewBag.Hobbies = fc["Hobbies"];
             return View();
         }
+        [HttpGet]
+        public ActionResult Signup()
+        { 
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Signup(Signup Signup)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Login");
+            }
+            return View(Signup);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
