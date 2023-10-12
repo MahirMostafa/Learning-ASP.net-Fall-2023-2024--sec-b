@@ -27,8 +27,8 @@ namespace form_submission.Models
         [RegularExpression(@"^\s*[1-9][0-9]-[0-9][0-9][0-9][0-9][0-9]-[1-3]\s*$",
          ErrorMessage = "Must be in this format: XX-XXXXX-X")]
         public string Id { get; set; }
-        [Required]
-        [EmailValidation("Id", ErrorMessage = "Email should be in the format 'Id@aiub.edu' where 'Id' should match the 'Id' field.")]
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailFormat(ErrorMessage = "Email should be in the format 'id@student.aiub.edu'")]
         public string Email { get; set; }
 
         [Required]
@@ -101,41 +101,28 @@ namespace form_submission.Models
         }
     }
 
-    public class EmailValidationAttribute : ValidationAttribute
+    public class EmailFormatAttribute : ValidationAttribute
     {
-        private readonly string id;
-
-        public EmailValidationAttribute(string Id)
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            id = Id;
-        }
-
-        public override bool IsValid(object value)
-        {
-            if (value == null || !(value is string))
+            if (value != null)
             {
-                return false;
+                string email = value.ToString();
+                string id = validationContext.ObjectType.GetProperty("Id").GetValue(validationContext.ObjectInstance, null) as string;
+
+                if (email == id + "@student.aiub.edu")
+                {
+                    return ValidationResult.Success;
+                }
+                else
+                {
+                    return new ValidationResult("Email should be in the format 'id@aiub.edu'");
+                }
             }
 
-            string email = (string)value;
-
-            // Split the email into parts (Id and domain)
-            string[] parts = email.Split('@');
-
-            // Ensure that there are two parts (Id and domain)
-            if (parts.Length != 2)
-            {
-                return false;
-            }
-
-            // Check if the Id part matches the provided field name
-            string expectedId = id;
-            string actualId = parts[0];
-
-            return expectedId == actualId && parts[1] == "aiub.edu";
+            return ValidationResult.Success;
         }
     }
-
 
 }
 
