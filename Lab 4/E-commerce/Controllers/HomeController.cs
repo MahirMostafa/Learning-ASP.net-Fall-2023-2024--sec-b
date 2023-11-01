@@ -126,33 +126,6 @@ namespace E_commerce.Controllers
             };
         }
 
-
-        //UserLoginDTO Convert(User u)
-        //{
-        //    return new UserLoginDTO()
-        //    {
-        //        Name = u.Name,
-        //        Email = u.Email,
-        //        Phone_Number = u.Phone_Number,
-        //        Password = u.Password,
-        //        Address = u.Address,
-
-        //    };
-        //}
-
-        //User Convert(UserLoginDTO u)
-        //{
-        //    return new User()
-        //    {
-        //        Name = u.Name,
-        //        Email = u.Email,
-        //        Phone_Number = u.Phone_Number,
-        //        Password = u.Password,
-        //        Address = u.Address,
-
-        //    };
-        //}
-
     }
     
 }
