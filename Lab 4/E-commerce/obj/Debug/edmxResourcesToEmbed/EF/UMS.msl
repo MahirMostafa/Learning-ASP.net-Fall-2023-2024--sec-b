@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Lab_TaskEntities1">
+    <EntitySetMapping Name="Catagories">
+      <EntityTypeMapping TypeName="Model.Catagory">
+        <MappingFragment StoreEntitySet="Catagories">
+          <ScalarProperty Name="Catagory_ID" ColumnName="Catagory ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="Model.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Order_ID" ColumnName="Order ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Order_Date" ColumnName="Order Date" />
+          <ScalarProperty Name="Order_Status" ColumnName="Order Status" />
+          <ScalarProperty Name="Shipping_Address" ColumnName="Shipping Address" />
+          <ScalarProperty Name="Payment_Method" ColumnName="Payment Method" />
+          <ScalarProperty Name="Total_Ammount" ColumnName="Total Ammount" />
+          <ScalarProperty Name="Order_Details" ColumnName="Order Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="Model.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Product_ID" ColumnName="Product ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product Name" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Catagory_ID" ColumnName="Catagory ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Model.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone Number" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
