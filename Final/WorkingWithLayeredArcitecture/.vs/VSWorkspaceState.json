@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AppLayerApi",
+    "\\AppLayerApi\\Controllers",
+    "\\AppLayerApi\\Models",
+    "\\BusinessLayer",
+    "\\DataAccessLayer",
+    "\\DataAccessLayer\\EF",
+    "\\DataAccessLayer\\EF\\Models"
+  ],
+  "SelectedNode": "\\DataAccessLayer\\Repos",
+  "PreviewInSolutionExplorer": false
+}

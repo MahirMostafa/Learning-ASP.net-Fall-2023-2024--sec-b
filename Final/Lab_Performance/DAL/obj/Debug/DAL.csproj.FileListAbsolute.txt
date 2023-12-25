@@ -1,0 +1,6 @@
+D:\Learning ASP. net\Learning-ASP.net-Fall-2023-2024--sec-b\Final\Lab_Performance\DAL\bin\Debug\DAL.dll
+D:\Learning ASP. net\Learning-ASP.net-Fall-2023-2024--sec-b\Final\Lab_Performance\DAL\bin\Debug\DAL.pdb
+D:\Learning ASP. net\Learning-ASP.net-Fall-2023-2024--sec-b\Final\Lab_Performance\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Learning ASP. net\Learning-ASP.net-Fall-2023-2024--sec-b\Final\Lab_Performance\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Learning ASP. net\Learning-ASP.net-Fall-2023-2024--sec-b\Final\Lab_Performance\DAL\obj\Debug\DAL.dll
+D:\Learning ASP. net\Learning-ASP.net-Fall-2023-2024--sec-b\Final\Lab_Performance\DAL\obj\Debug\DAL.pdb

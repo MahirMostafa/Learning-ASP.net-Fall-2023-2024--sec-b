@@ -69,10 +69,6 @@ namespace E_commerce.Controllers
             if (ModelState.IsValid)
             {
                 var db = new Lab_TaskEntities1();
-                var config = new MapperConfiguration(cfg => {
-                    cfg.CreateMap<UserLoginDTO, User>();
-                });
-                var mapper = new Mapper(config);
                 var dbUser = db.Users.FirstOrDefault(u => u.Email == user.Email);
                 if (dbUser != null)
                 {
@@ -80,7 +76,7 @@ namespace E_commerce.Controllers
                     {
                        
                        
-                        return RedirectToAction("Index");
+                        return RedirectToAction("Index","Shop"); 
                     }
                     else
                     {
@@ -98,6 +94,7 @@ namespace E_commerce.Controllers
             
             return View();
         }
+
 
 
         UserSignUpDTO Convert(User u )
